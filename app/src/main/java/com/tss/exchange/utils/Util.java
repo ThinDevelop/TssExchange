@@ -52,29 +52,386 @@ public class Util {
 
     public static String toOneLinePrint(String one, String two, String three, String four) {
         StringBuilder result = new StringBuilder();
-        result.append(one);
-        for (int s = one.length();s<4;s++) {
-            result.append("_");
+        if (one.length() == 3) {
+            result.append(one);
+            result.append(' ');
+            result.append(' ');
+        } else {
+            result.append(one);
         }
+        result.append(' ');
 
-        for (int s = two.length();s<7;s++) {
-            result.append("_");
-        }
+
+        result.append(getSpace(two.length()));
         result.append(two);
 
-        for (int s = three.length();s<7;s++) {
-            result.append("_");
-        }
+        result.append(getSpace3(three.length()));
         result.append(three);
 
-        for (int s = four.length();s<10;s++) {
-            result.append("_");
-        }
+        result.append(getSpace4(four.length()));
         result.append(four);
 
         return result.toString();
     }
 
+    private static String getSpace(int length) {
+        StringBuilder result = new StringBuilder();
+        if (length == 7) {
+            result.append(' ');
+
+        } else if (length == 6) {
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+        } else if (length == 5) {
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 4) {
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 3) {
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 2) {
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 1) {
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        }
+
+        return result.toString();
+    }
+
+
+    private static String getSpace3(int length) {
+        StringBuilder result = new StringBuilder();
+        if (length == 9) {
+            result.append(' ');
+        } else if (length == 8) {
+            result.append(' ');
+
+        } else if (length == 7) {
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+
+
+
+            result.append(' ');
+        } else if (length == 6) {
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+
+            result.append(' ');
+
+            result.append(' ');
+        } else if (length == 5) {
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 4) {
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 3) {
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 2) {
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 1) {
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        }
+
+        return result.toString();
+    }
+
+    private static String getSpace4(int length) {
+        StringBuilder result = new StringBuilder();
+        if (length == 9) {
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 8) {
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 7) {
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 6) {
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+
+            result.append(' ');
+
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 5) {
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 4) {
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 3) {
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 2) {
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        } else if (length == 1) {
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+            result.append(' ');
+        }
+
+        return result.toString();
+    }
     public static String bitmapToBase64(Bitmap bitmap) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 20, byteArrayOutputStream);
