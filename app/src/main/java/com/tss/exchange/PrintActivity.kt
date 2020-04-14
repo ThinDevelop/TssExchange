@@ -153,7 +153,7 @@ class PrintActivity: BaseActivity1() {
         printerParams1 = PrinterParams()
         printerParams1.setAlign(PrinterParams.ALIGN.RIGHT)
         printerParams1.setTextSize(22)
-        printerParams1.setText("รวมเป็นเงิน  "+paramModel?.summary+"")
+        printerParams1.setText("รวมเป็นเงิน  "+paramModel?.summary+" ")
         textList.add(printerParams1)
         printerParams1 = PrinterParams()
         printerParams1.setAlign(PrinterParams.ALIGN.LEFT)

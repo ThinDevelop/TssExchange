@@ -85,13 +85,13 @@ public class Util {
             result.append(' ');
             result.append(' ');
             result.append(' ');
-
+            result.append(' ');
         } else if (length == 5) {
             result.append(' ');
             result.append(' ');
             result.append(' ');
 
-
+            result.append(' ');
             result.append(' ');
 
             result.append(' ');
@@ -108,7 +108,7 @@ public class Util {
             result.append(' ');
         } else if (length == 3) {
             result.append(' ');
-
+            result.append(' ');
             result.append(' ');
             result.append(' ');
             result.append(' ');
