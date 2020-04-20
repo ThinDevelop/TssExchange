@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity(), TinyWebServer.CallListener {
         if (resultCode == Activity.RESULT_CANCELED) {
             data?.let {
                 val errorMsg = data?.getExtras()
-                    ?.get("error") as String
+                    ?.get("error") as? String
                 val rootObject = JSONObject()
                 rootObject.put("error", "1112")
                 rootObject.put("msg", errorMsg)
